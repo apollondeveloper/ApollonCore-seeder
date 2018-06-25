@@ -400,13 +400,28 @@ extern "C" void* ThreadStats(void*) {
   return nullptr;
 }
 
-static const string mainnet_seeds[] = {"seed.apollon.one", ""};
-static const string testnet_seeds[] = {"seed.apollon.one", ""};
+static const string mainnet_seeds[] = {"seed.apolloncoin.io", ""};
+static const string testnet_seeds[] = {"seed.apolloncoin.io", ""};
 static const string *seeds = mainnet_seeds;
 
 extern "C" void* ThreadSeeder(void*) {
   if (!fTestNet){
-    db.Add(CService("kjy2eqzk4zwi5zd3.onion", 12218), true);
+    db.Add(CService("144.202.6.236", 12218), true);
+    db.Add(CService("139.162.27.66", 12218), true);
+    db.Add(CService("207.148.12.181", 12218), true);
+    db.Add(CService("80.211.230.15", 12218), true);
+    db.Add(CService("45.76.28.140", 12218), true);
+    db.Add(CService("104.156.237.170", 12116), true);
+    db.Add(CService("212.237.58.199", 12218), true);
+    db.Add(CService("199.247.23.12", 12218), true);
+    db.Add(CService("173.199.70.185", 12218), true);
+    db.Add(CService("149.28.108.70", 12218), true);
+    db.Add(CService("193.161.85.99", 12116), true);
+    db.Add(CService("95.179.151.147", 12218), true);
+    db.Add(CService("140.82.43.134", 12218), true);
+    db.Add(CService("217.69.1.74", 12218), true);
+    db.Add(CService("45.77.70.76", 11617), true);
+    db.Add(CService("45.32.232.95", 12218), true);
   }
   do {
     for (int i=0; seeds[i] != ""; i++) {
